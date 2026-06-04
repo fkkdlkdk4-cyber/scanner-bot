@@ -17,7 +17,10 @@ jobs:
           python-version: "3.11"
 
       - name: Install requests
-        run: pip install requests
+        run: pip install aiohttp requests
 
       - name: Run script
-        python fHS.py
+        run: python fHS.py
+        env:
+          TG_TOKEN: ${{ secrets.TG_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
