@@ -10,7 +10,8 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install aiohttp requests
-      - run: python ./fHS.py
+      - run: pwd
+      - run: find . -name "*.py" -o -name "*.PY"
         env:
           TG_TOKEN: ${{ secrets.TG_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
